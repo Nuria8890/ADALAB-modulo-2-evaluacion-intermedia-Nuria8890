@@ -18,11 +18,7 @@ const randomNumber = getRandomNumber(max);
 button.addEventListener('click', (event) => {
   event.preventDefault();
   compareNumbers();
-  
-
-  // Actualizar el contador de intentos cada vez que la jugadora pruebe
-    numberAttempts += 1;
-    attempts.innerHTML = `Número de intentos: ${numberAttempts}`;
+  updateAttempst();
 });
 
 const compareNumbers = () => {
@@ -30,13 +26,18 @@ const compareNumbers = () => {
 
     if(userNumber === randomNumber) {
       track.innerHTML = 'Has ganado campeona!!!'
-    } else if (userNumber < randomNumber && userNumber > 1) {
+    } else if (userNumber < randomNumber && userNumber > 0) {
       track.innerHTML = 'Pista: Demasiado bajo'
-    } else if (userNumber > randomNumber && userNumber < 100) {
+    } else if (userNumber > randomNumber && userNumber < 101) {
       track.innerHTML = 'Pista: Demasiado alto'
     } else if (userNumber < 1 || userNumber > 100) {
       track.innerHTML = 'Pista: El número debe estar entre 1 y 100'
     }
+}
+
+const updateAttempst = () => {
+  numberAttempts += 1;
+    attempts.innerHTML = `Número de intentos: ${numberAttempts}`;
 }
 
 
