@@ -17,7 +17,7 @@ const randomNumber = getRandomNumber(max);
 
 // Comparo el número introducido por la usuaria con el número aleatorio
 const compareNumbers = () => {
-  const userNumber = parseFloat(input.value);
+  const userNumber = parseInt(input.value);
 
     if(userNumber === randomNumber) {
       track.innerHTML = 'Has ganado campeona!!!'
