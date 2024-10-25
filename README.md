@@ -1,3 +1,11 @@
+**Hola!!**
+
+Aquí te presento el juego *Adivina el número*.
+
+Es una evaluación intermedia que he hecho en Adalab, tras dos intensas semanas aprendiendo JavaScript.
+
+Espero que lo disfrutes! 👾 🎮
+
 ## Guía de visualización de la página web:
 
 ### Si quieres ver la web desde GitHub:
