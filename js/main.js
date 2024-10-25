@@ -49,14 +49,15 @@ const updateAttempst = () => {
     attempts.innerHTML = `Número de intentos: ${numberAttempts}`;
 }
 
-
-// Escucho el click del botón y ejecuto las funciones
-button.addEventListener('click', (event) => {
+// Función manejadora del evento
+const handleClickButton = (event) => {
   event.preventDefault();
   compareNumbers();
   updateAttempst();
-});
+}
 
+// Escucho el click del botón
+button.addEventListener('click', (handleClickButton));
 
 
 
