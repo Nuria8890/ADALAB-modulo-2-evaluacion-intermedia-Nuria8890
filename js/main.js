@@ -1,26 +1,21 @@
 'use strict';
 
+const max = 100;
 const input = document.querySelector('.js-input');
 const button = document.querySelector('.js-button');
 const track = document.querySelector('.js-track');
 const attempts = document.querySelector('.js-attempts');
 let numberAttempts = 0;
 
-// Generar número aleatorio
-const max = 100;
 
+// Genero número aletorio
 function getRandomNumber(max) { 
   return Math.ceil(Math.random() * max); 
 }
 const randomNumber = getRandomNumber(max);
 
-// Cuando hago click en el botón "Prueba" accedo al contenido del input
-button.addEventListener('click', (event) => {
-  event.preventDefault();
-  compareNumbers();
-  updateAttempst();
-});
 
+// Comparo el número introducido por la usuaria con el número aleatorio
 const compareNumbers = () => {
   const userNumber = parseFloat(input.value);
 
@@ -35,9 +30,22 @@ const compareNumbers = () => {
     }
 }
 
+
+// Actualizo el número de intentos
 const updateAttempst = () => {
   numberAttempts += 1;
     attempts.innerHTML = `Número de intentos: ${numberAttempts}`;
 }
+
+
+// Escucho el click del botón y ejecuto las funciones
+button.addEventListener('click', (event) => {
+  event.preventDefault();
+  compareNumbers();
+  updateAttempst();
+});
+
+
+
 
 
