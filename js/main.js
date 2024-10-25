@@ -3,6 +3,7 @@
 
 const input = document.querySelector('.js-input')
 const button = document.querySelector('.js-button');
+const track = document.querySelector('.js-track');
 
 // Generar número aleatorio
 const max = 100;
@@ -19,13 +20,14 @@ button.addEventListener('click', (event) => {
   const userNumber = parseFloat(input.value);
   console.log('El número introducido por la usuaria es:', userNumber);
 
-  if(userNumber === randomNumber) {
-    console.log('el número es el mismo')
-  } else {
-    console.log('El número es diferente')
-  }
+  // Comparar el userNumber con el número aleatorio
+    if(userNumber === randomNumber) {
+      track.innerHTML = 'Has ganado campeona!!!'
+    } else {
+      console.log('El número es diferente')
+    }
   
 });
 
-// Comparar el userNumber con el número aleatorio
+
 
