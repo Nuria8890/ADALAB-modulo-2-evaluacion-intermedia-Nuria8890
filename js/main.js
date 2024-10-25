@@ -23,8 +23,12 @@ button.addEventListener('click', (event) => {
   // Comparar el userNumber con el número aleatorio
     if(userNumber === randomNumber) {
       track.innerHTML = 'Has ganado campeona!!!'
-    } else {
-      console.log('El número es diferente')
+    } else if (userNumber < randomNumber && userNumber > 1) {
+      track.innerHTML = 'Demasiado bajo'
+    } else if (userNumber > randomNumber && userNumber < 100) {
+      track.innerHTML = 'Demasiado alto'
+    } else if (userNumber < 1 || userNumber > 100) {
+      track.innerHTML = 'El número debe estar entre 1 y 100'
     }
   
 });
