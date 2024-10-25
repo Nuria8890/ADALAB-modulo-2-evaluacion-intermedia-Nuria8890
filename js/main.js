@@ -4,6 +4,8 @@
 const input = document.querySelector('.js-input')
 const button = document.querySelector('.js-button');
 const track = document.querySelector('.js-track');
+const attempts = document.querySelector('.js-attempts');
+let numberAttempts = 0;
 
 // Generar número aleatorio
 const max = 100;
@@ -30,10 +32,14 @@ button.addEventListener('click', (event) => {
     } else if (userNumber < 1 || userNumber > 100) {
       track.innerHTML = 'Pista: El número debe estar entre 1 y 100'
     }
-  // Actualizar el contador de intentos cada vez que la jugadora pruebe
+ // Actualizar el contador de intentos cada vez que la jugadora pruebe
+    // Cada vez que la usuaria haga click en prueba, sumo 1 al contador
 
 
+    
+    numberAttempts += 1;
+    console.log('ahora numberAttempts vale', numberAttempts);
+
+    attempts.innerHTML = `Número de intentos: ${numberAttempts}`;
 });
-
-
 
