@@ -24,13 +24,15 @@ button.addEventListener('click', (event) => {
     if(userNumber === randomNumber) {
       track.innerHTML = 'Has ganado campeona!!!'
     } else if (userNumber < randomNumber && userNumber > 1) {
-      track.innerHTML = 'Demasiado bajo'
+      track.innerHTML = 'Pista: Demasiado bajo'
     } else if (userNumber > randomNumber && userNumber < 100) {
-      track.innerHTML = 'Demasiado alto'
+      track.innerHTML = 'Pista: Demasiado alto'
     } else if (userNumber < 1 || userNumber > 100) {
-      track.innerHTML = 'El número debe estar entre 1 y 100'
+      track.innerHTML = 'Pista: El número debe estar entre 1 y 100'
     }
-  
+  // Actualizar el contador de intentos cada vez que la jugadora pruebe
+
+
 });
 
 
