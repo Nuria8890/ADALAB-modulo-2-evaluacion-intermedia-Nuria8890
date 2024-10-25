@@ -31,7 +31,7 @@ const compareNumbers = () => {
 
   /*También se puede hacer así:  
     if (userNumber < 1 || userNumber > 100) {
-        track.innerHTML = 'Pista: El número debe estar entre 1 y 100'  
+      track.innerHTML = 'Pista: El número debe estar entre 1 y 100'  
     } else if (userNumber === randomNumber) {
       track.innerHTML = 'Has ganado campeona!!!'
     } else if (userNumber < randomNumber) {
